@@ -1,3 +1,25 @@
+/* Fonts */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/hanken-grotesk-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/hanken-grotesk-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/fonts/hanken-grotesk-500.woff2') format('woff2');
+}
+
 /* Reset */
 /* Box sizing rules */
 *,
@@ -94,8 +116,16 @@ select {
 
 /* Base styles */
 body {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+  'Helvetica Neue', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 28px 16px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-rendering: optimizeSpeed;
+  line-height: 1.62;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
