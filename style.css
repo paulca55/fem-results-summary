@@ -147,6 +147,24 @@ h2 {
   line-height: 1.1;
 }
 
+/* Buttons */
+.button {
+  display: block;
+  font-weight: bold;
+  color: var(--color-white);
+  width: 100%;
+  background-color: var(--color-dark-navy);
+  padding: 14px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 42px;
+}
+
+.button:hover {
+  background-image: linear-gradient(to bottom, var(--gradient-1-colors));
+}
+
 /* Summary card */
 .summary-card {
   display: grid;
@@ -224,4 +242,55 @@ h2 {
   line-height: 1.4;
   margin-top: 16px;
   padding-bottom: 12px;
+}
+
+/* Summary items */
+.summary-items {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.summary-item {
+  --color: var(--color-red-hsl);
+  display: flex;
+  align-items: center;
+  background-color: hsl(var(--color) / 5%);
+  color: hsl(var(--color));
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+.summary-item--memory {
+  --color: var(--color-yellow-hsl);
+}
+
+.summary-item--verbal {
+  --color: var(--color-green-hsl);
+}
+
+.summary-item--visual {
+  --color: var(--color-blue-hsl);
+}
+
+.summary-item__icon {
+  width: 20px;
+  height: 20px
+}
+
+.summary-item__heading {
+  font-size: 18px;
+  margin-left: 14px;
+  font-weight: 500;
+}
+
+.summary-item__score {
+  margin-left: auto;
+  color: var(--color-dark-navy);
+  font-weight: bold;
+}
+
+.summary-item__total {
+  color: hsl(var(--color-dark-navy-hsl) / 50%);
+  padding-left: 2px;
 }
