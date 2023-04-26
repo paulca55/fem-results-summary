@@ -143,7 +143,7 @@ body {
 /* Typography */
 h2 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.1;
 }
 
@@ -239,6 +239,7 @@ h2 {
 .result-brief__heading {
   font-size: 32px;
   line-height: 1.05;
+  font-weight: bold;
 }
 
 .result-brief__body {
