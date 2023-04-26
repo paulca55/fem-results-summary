@@ -49,13 +49,17 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
+html {
+  height: 100%;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -137,7 +141,6 @@ body {
   line-height: 1.62;
   font-size: 1.125rem;
   font-weight: 500;
-  background-color: var(--color-blue-lightest);
 }
 
 /* Typography */
