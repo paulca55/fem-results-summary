@@ -132,9 +132,7 @@ body {
   font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
   'Helvetica Neue', sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 28px 16px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   text-rendering: optimizeSpeed;
@@ -145,7 +143,7 @@ body {
 
 /* Typography */
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.1;
 }
@@ -161,7 +159,7 @@ h2 {
   border-radius: 30px;
   text-decoration: none;
   text-align: center;
-  margin-top: 42px;
+  margin-top: 25px;
 }
 
 .button:hover {
@@ -174,19 +172,14 @@ h2 {
 
 /* Summary card */
 .summary-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   width: 100%;
-  max-width: 736px;
   background-color: var(--color-white);
-  border-radius: 32px;
-  box-shadow: 0 30px 60px hsl(224 82% 58% / 15%);
 }
 
 .summary-card__result {
   background-image: linear-gradient(to bottom, var(--gradient-1-colors));
-  border-radius: 32px;
-  padding: 40px;
+  border-radius: 0 0 32px 32px;
+  padding: 26px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -202,7 +195,7 @@ h2 {
 }
 
 .summary-card__summary {
-  padding: 40px;
+  padding: 32px;
 }
 
 /* Rating circle */
@@ -211,16 +204,16 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   background-image: linear-gradient(to bottom, var(--gradient-2-colors));
   border-radius: 50%;
-  margin-top: 36px;
+  margin-top: 26px;
 }
 
 .rating-circle__score {
   color: var(--color-white);
-  font-size: 72px;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -228,19 +221,20 @@ h2 {
 .rating-circle__total {
   color: hsl(var(--color-blue-light-hsl) / 51.68%);
   font-weight: 500;
+  font-size: 1rem;
 }
 
 /* Result brief */
 .result-brief {
   text-align: center;
   color: var(--color-white);
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 34px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 30px;
 }
 
 .result-brief__heading {
-  font-size: 32px;
+  font-size: 1.5rem;
   line-height: 1.05;
   font-weight: bold;
 }
@@ -248,14 +242,15 @@ h2 {
 .result-brief__body {
   color: var(--color-blue-light);
   line-height: 1.4;
-  margin-top: 16px;
+  margin-top: 12px;
   padding-bottom: 12px;
+  font-size: 1rem;
 }
 
 /* Summary items */
 .summary-items {
   display: grid;
-  gap: 18px;
+  gap: 16px;
   margin-top: 30px;
 }
 
@@ -283,22 +278,115 @@ h2 {
 
 .summary-item__icon {
   width: 20px;
-  height: 20px
+  height: 20px;
+  flex-shrink: 0;
+  margin-right: 14px;
+}
+
+.summary-item__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 .summary-item__heading {
-  font-size: 18px;
-  margin-left: 14px;
+  font-size: 1rem;
   font-weight: 500;
+  margin-right: 20px;
+  flex: 1;
 }
 
 .summary-item__score {
-  margin-left: auto;
   color: var(--color-dark-navy);
   font-weight: bold;
+  flex-shrink: 0;
+  font-size: 1rem;
 }
 
 .summary-item__total {
   color: hsl(var(--color-dark-navy-hsl) / 50%);
   padding-left: 2px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 30em) {
+  /* Base styles */
+  body {
+    padding: 28px;
+    align-items: center;
+  }
+
+  /* Typography */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Buttons */
+  .button {
+    margin-top: 42px;
+  }
+
+  /* Summary card*/
+  .summary-card {
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 30px 60px hsl(224 82% 58% / 15%);
+  }
+
+  .summary-card__result {
+    border-radius: 32px;
+    padding: 40px;
+  }
+
+  .summary-card__summary {
+    padding: 40px;
+  }
+
+  /* Rating circle*/
+  .rating-circle {
+    width: 200px;
+    height: 200px;
+    margin-top: 36px;
+  }
+
+  .rating-circle__score {
+    font-size: 4.5rem;
+  }
+
+  .rating-circle__total {
+    font-size: 1.125rem;
+  }
+
+  /* Result brief */
+  .result-brief {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 34px;
+  }
+
+  .result-brief__heading {
+    font-size: 2rem;
+  }
+
+  .result-brief__body {
+    font-size: 1.125rem;
+    margin-top: 16px;
+  }
+
+  /* Summary item */
+  .summary-item__heading {
+    font-size: 1.125rem;
+  }
+
+  .summary-item__score {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .summary-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 736px;
+  }
 }
